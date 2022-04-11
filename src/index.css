@@ -7,6 +7,7 @@
   --dark-grayish-blue: hsl(217, 19%, 24%);
   --dark-blue: hsl(218, 23%, 16%);
   --white: #fff;
+  --black: #000;
 }
 
 html {
@@ -14,8 +15,8 @@ html {
   font-size: 1.75rem;
 }
 
-body {
-  background-color: var(--dark-blue);
-  font-family: "Manrope", sans-serif;
-  color: var(--white);
+@media (max-width: 375px) {
+  html {
+    font-size: 1.5rem;
+  }
 }

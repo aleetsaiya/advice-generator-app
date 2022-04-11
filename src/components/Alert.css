@@ -1,0 +1,33 @@
+.alert {
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(252, 91, 91);
+  color: black;
+  display: flex;
+  font-size: 0.6rem;
+  padding: 0 0.7rem;
+  border-radius: 0.3rem;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  transition: all cubic-bezier(0.25, 0.1, 0.13, 1.43) 0.3s;
+}
+
+.alert > img {
+  width: 0.55rem;
+  margin-right: 0.2rem;
+}
+
+.alert.alert__show {
+  top: 0.8rem;
+}
+
+@media (max-width: 375px) {
+  .alert {
+    font-size: 0.4rem;
+    padding: 0 0.5rem;
+  }
+  .alert > img {
+    width: 0.35rem;
+  }
+}

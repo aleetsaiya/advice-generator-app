@@ -1,0 +1,187 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap);
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css (1) ***!
+  \*********************************************************************/
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  --white: #fff;
+  --black: #000;
+}
+
+html {
+  /* 28px */
+  font-size: 1.75rem;
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 1.5rem;
+  }
+}
+
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Card.css ***!
+  \***************************************************************************/
+.card {
+  width: 100%;
+  max-width: 16rem;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 0.5rem;
+  text-align: center;
+  position: relative;
+  padding: 1em;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card__id {
+  color: var(--neon-green);
+  font-size: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.card__msg {
+  margin-top: 0.8rem;
+  line-height: 1.7;
+}
+
+.card__divide {
+  display: block;
+  margin: 1.2rem auto;
+  width: 100%;
+}
+
+.card__btn {
+  position: absolute;
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.card__btn:hover {
+  box-shadow: 0px 0px 0.65rem 0px var(--neon-green);
+}
+
+.card__btn > img {
+  width: 0.8rem;
+}
+
+.card.card__loading {
+  background: linear-gradient(
+    to right,
+    var(--dark-grayish-blue) 0%,
+    var(--dark-grayish-blue) 77%,
+    rgba(255, 255, 255, 0.288) 80%,
+    var(--dark-grayish-blue) 83%
+  );
+  background-size: 200% 100%;
+  animation: 2s moveInLeft infinite;
+  background-position: 50%;
+}
+
+.card__btn:disabled:hover {
+  box-shadow: 0px transparent;
+}
+
+.card.card__loading > .card__id {
+  background-color: var(--dark-blue);
+  min-height: 1rem;
+  border-radius: 5px;
+  color: transparent;
+}
+
+.card.card__loading > .card__msg {
+  background-color: var(--dark-blue);
+  border-radius: 5px;
+  color: transparent;
+  min-height: 2.5rem;
+}
+
+@keyframes moveInLeft {
+  0% {
+    background-position: 50%;
+  }
+  50% {
+    background-position: 170%;
+  }
+  100% {
+    background-position: 50%;
+  }
+}
+
+/*!****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Alert.css ***!
+  \****************************************************************************/
+.alert {
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(252, 91, 91);
+  color: black;
+  display: flex;
+  font-size: 0.6rem;
+  padding: 0 0.7rem;
+  border-radius: 0.3rem;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  transition: all cubic-bezier(0.25, 0.1, 0.13, 1.43) 0.3s;
+}
+
+.alert > img {
+  width: 0.55rem;
+  margin-right: 0.2rem;
+}
+
+.alert.alert__show {
+  top: 0.8rem;
+}
+
+@media (max-width: 375px) {
+  .alert {
+    font-size: 0.4rem;
+    padding: 0 0.5rem;
+  }
+  .alert > img {
+    width: 0.35rem;
+  }
+}
+
+/*!***************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/App.css ***!
+  \***************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-blue);
+  font-family: "Manrope", sans-serif;
+  color: var(--white);
+}
+
+main {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  outline: none;
+}
+
+
+/*# sourceMappingURL=main.css.map*/

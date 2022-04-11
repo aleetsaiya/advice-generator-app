@@ -1,0 +1,92 @@
+.card {
+  width: 100%;
+  max-width: 16rem;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 0.5rem;
+  text-align: center;
+  position: relative;
+  padding: 1em;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card__id {
+  color: var(--neon-green);
+  font-size: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.card__msg {
+  margin-top: 0.8rem;
+  line-height: 1.7;
+}
+
+.card__divide {
+  display: block;
+  margin: 1.2rem auto;
+  width: 100%;
+}
+
+.card__btn {
+  position: absolute;
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.card__btn:hover {
+  box-shadow: 0px 0px 0.65rem 0px var(--neon-green);
+}
+
+.card__btn > img {
+  width: 0.8rem;
+}
+
+.card.card__loading {
+  background: linear-gradient(
+    to right,
+    var(--dark-grayish-blue) 0%,
+    var(--dark-grayish-blue) 77%,
+    rgba(255, 255, 255, 0.288) 80%,
+    var(--dark-grayish-blue) 83%
+  );
+  background-size: 200% 100%;
+  animation: 2s moveInLeft infinite;
+  background-position: 50%;
+}
+
+.card__btn:disabled:hover {
+  box-shadow: 0px transparent;
+}
+
+.card.card__loading > .card__id {
+  background-color: var(--dark-blue);
+  min-height: 1rem;
+  border-radius: 5px;
+  color: transparent;
+}
+
+.card.card__loading > .card__msg {
+  background-color: var(--dark-blue);
+  border-radius: 5px;
+  color: transparent;
+  min-height: 2.5rem;
+}
+
+@keyframes moveInLeft {
+  0% {
+    background-position: 50%;
+  }
+  50% {
+    background-position: 170%;
+  }
+  100% {
+    background-position: 50%;
+  }
+}
